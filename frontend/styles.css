@@ -315,6 +315,13 @@ nav {
 .dark {
     color: #495057;
 }
+.darker {
+    color: #343A40;
+}
+
+.bold {
+    font-weight: bold;
+}
 
 .grey-title {
     font-weight: bold;
