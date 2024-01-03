@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan&family=Lora&family=Roboto&display=swap');
+
+:root {
+  /* Generic */
+  --gutterMd: 0.8rem;
+  --gutterLg: 1.6rem;
+  --colorPrimary600: #5e35b1;
+  --fontSizeLg: 2.1rem;
+  --transitionDuration: 300ms;
+  --transitionTF: cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.Input-text {
+  display: block;
+  margin: 0;
+  color: inherit;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-family: 'Roboto';
+  line-height: 1.8;
+  border: 1px dotted darkorchid;
+  border-radius: 0.4rem;
+  transition: box-shadow var(--transitionDuration);
+}
+
+.Input-text::placeholder {
+  color: #B0BEC5;
+}
+
+.Input-text:focus {
+  outline: none;
+  box-shadow: 0.2rem 0.8rem 1.6rem var(--colorPrimary600);
+}
+
+/* ----------------------------------------------------------------------------------------------------- */
+.login-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-radius: 20px;
+  width: 50%;
+  margin: 5% auto;
+  border: 0.5px dotted purple;
+  padding: 3% 1%;
+  box-shadow: 0.2rem 0.8rem 1.6rem var(--colorPrimary600);
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -ms-border-radius: 20px;
+  -o-border-radius: 20px;
+}
+
+.login-box .Input {
+  margin: 2%;
+}
+
+.login-box .title {
+  margin: 0 auto 10px auto;
+}
+
+
+
+
+/* CSS */
+.main-button {
+  width: 40%;
+  margin: 3% auto;
+  align-items: center;
+  background-color: var(--colorPrimary600);
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  display: flex;
+  font-family: Inter,sans-serif;
+  font-size: 16px;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+  padding: 0 25px;
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.main-button:after {
+  background-color: #111;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+  -webkit-transition: transform .2s ease-out;
+  -moz-transition: transform .2s ease-out;
+  -ms-transition: transform .2s ease-out;
+  -o-transition: transform .2s ease-out;
+}
+
+.main-button:hover:after {
+  transform: translate(0, 0);
+  -webkit-transform: translate(0, 0);
+  -moz-transform: translate(0, 0);
+  -ms-transform: translate(0, 0);
+  -o-transform: translate(0, 0);
+}
+
+.main-button:active {
+  background-color: #000;
+  outline: 0;
+}
+
+.button-56:hover {
+  outline: 0;
+}
+
+@media (min-width: 768px) {
+  .button-56 {
+    padding: 0 40px;
+  }
+}
