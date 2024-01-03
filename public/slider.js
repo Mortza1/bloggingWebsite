@@ -13,3 +13,8 @@ function showSlides() {
   setTimeout(showSlides, 4000); // Change image every 2 seconds
 }
 
+let login = document.getElementById("login-image");
+login.addEventListener('click', ()=> {
+  console.log("loggin")
+  window.location.href = "/login";
+})

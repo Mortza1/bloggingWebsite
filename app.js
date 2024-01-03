@@ -1,17 +1,17 @@
 const express = require('express');
-const app = express();
 const path = require('path');
+const app = express();
 const port = process.env.PORT || 3000;
 
-// Set static folder for serving HTML, CSS, JS files
+// Static files middleware
 app.use(express.static(path.join(__dirname, 'public')));
 
-// Define your API routes or other backend logic here
+// Routes
+const indexRoute = require('./src/routes/index');
+const apiRoutes = require('./src/routes/apiRoutes'); // Example API routes
 
-// Route to serve your HTML file
-app.get('/', (req, res) => {
-    res.sendFile(path.join(__dirname, 'public', 'index.html'));
-});
+app.use('/', indexRoute);
+app.use('/api', apiRoutes);
 
 app.listen(port, () => {
     console.log(`Server running on port ${port}`);
