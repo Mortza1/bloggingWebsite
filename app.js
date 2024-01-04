@@ -14,6 +14,7 @@ app.use(express.json());
 const indexRoute = require('./src/routes/index');
 const apiRoutes = require('./src/routes/apiRoutes'); // Example API routes
 const authRoutes = require('./src/routes/authRoutes');
+
 app.use('/', indexRoute);
 app.use('/api', apiRoutes);
 app.use('/auth', authRoutes);

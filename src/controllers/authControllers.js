@@ -4,10 +4,10 @@ const bcrypt = require('bcrypt');
 const authController = {
     async signup(req, res) {
         try {
-            const { email, password } = req.body;
+            const { username, email, password } = req.body;
             // Hash password before saving it to the database
             const hashedPassword = await bcrypt.hash(password, 10);
-            const newUser = await User.create({ email, password: hashedPassword });
+            const newUser = await User.create({ username, email, password: hashedPassword });
             res.json(newUser);
         } catch (error) {
             res.status(500).json({ message: error.message });

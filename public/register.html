@@ -5,12 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="form.css">
     <link rel="stylesheet" href="styles.css">
-    <title>Neural Nexus - login</title>
+    <title>Neural Nexus - Register</title>
 </head>
 <body>
     <section>
         <div class="titleImage">
-            <img src="../assets/login-title.jpg" alt="">
+            <img src="../assets/register-title.jpg" alt="">
             <div class="greyBox"></div>
         <nav>
             <div class="logo">RENO</div>
@@ -31,22 +31,28 @@
         <div class="content">
             <div class="title white-title large lora margin-20">Neural Nexus: Where AI Ignites Innovation.</div>
             <!-- <div class="sub small lora subtitle margin-20">Progressively incentivize cooperative systems through technically sound functionalities. The credibly productivate seamless data.</div> -->
-            <div class="date small lora white-title margin-20">LOGIN</div>
+            <div class="date small lora white-title margin-20">REGISTER</div>
         </div>
         </div>
     </section>
     <section>
         <div class="login-box">
-            <div class="title medium-125 roboto bold">LOGIN</div>
+            <div class="title medium-125 roboto bold">REGISTER</div>
             <div class="Input">
-                <input type="email" id="emailInput" class="Input-text" placeholder="email address">
+                <input type="text" id="usernameInput" class="Input-text" placeholder="username">
             </div>
             <div class="Input">
-                <input type="password" id="passwordInput" class="Input-text" placeholder="Password">
+                <input type="email" id="reg-emailInput" class="Input-text" placeholder="email address">
             </div>
-            <button class="main-button" id="loginButton" role="button">login</button>
+            <div class="Input">
+                <input type="password" id="reg-passwordInput" class="Input-text" placeholder="Password">
+            </div>
+            <div class="Input">
+                <input type="password" id="reg-passwordInputConfirm" class="Input-text" placeholder="confirm password">
+            </div>
+            <button class="main-button" id="registerButton" role="button">register</button>
         </div>
     </section>
-    <script src="login.js"></script>
+    <script src="register.js"></script>
 </body>
 </html>
