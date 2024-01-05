@@ -22,11 +22,16 @@ document.getElementById('loginButton').addEventListener('click', function() {
         }
         return response.json();
     })
+    // Inside your fetch request upon successful login or signup
     .then(data => {
-        // Handle response from backend
-        console.log('Response from server:', data);
-        // Perform actions based on response
+        // Assuming the server responds with { token: 'your_token_here' }
+        const authToken = data.token;
+        // Store the token in localStorage
+        localStorage.setItem('authToken', authToken);
+        // Redirect to the home screen or another page
+        window.location.href = '/'; // Replace '/home' with your desired home page URL
     })
+
     .catch(error => {
         // Handle errors
         console.error('There was a problem with the fetch operation:', error);
@@ -78,10 +83,15 @@ document.getElementById("registerButton").addEventListener('click', function() {
             return response.json();
         })
         .then(data => {
-            console.log('Response from server:', data);
+            const authToken = data.token;
+            // Store the token in localStorage
+            localStorage.setItem('authToken', authToken);
+            // Redirect to the home screen or another page
+            window.location.href = '/'; // Replace '/home' with your desired home page URL
         })
         .catch(error => {
             console.error('There was a problem with the fetch operation:', error);
         })
     }
 })
+

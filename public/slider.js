@@ -15,6 +15,32 @@ function showSlides() {
 
 let login = document.getElementById("login-image");
 login.addEventListener('click', ()=> {
-  console.log("loggin")
   window.location.href = "/login";
 })
+
+function openBlogPage() {
+  fetch('/blog', {
+      method: 'GET',
+      headers: {
+          'Authorization': `{localStorage.getItem('authToken')` // Include the user's token if available
+      }
+  })
+  .then(response => {
+      if (response.ok) {
+          // Blog page can be opened
+          window.location.href = '/blog'; // Redirect to the blog page
+      } else if (response.status === 401) {
+          // Unauthorized: Handle as needed (e.g., user not logged in)
+          console.log('User is not authenticated');
+          window.location.href = '/login';
+          // You can redirect the user to a login page or show a message
+      } else {
+          // Other errors: Handle accordingly
+          console.error('Error:', response.statusText);
+      }
+  })
+  .catch(error => {
+      console.error('Fetch error:', error);
+  });
+}
+
