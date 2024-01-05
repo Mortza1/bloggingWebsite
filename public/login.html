@@ -10,7 +10,7 @@
 <body>
     <section>
         <div class="titleImage">
-            <img src="../assets/login-title.jpg" alt="">
+            <img src="../assets/login-title.jpg" style="width: 100%;" alt="">
             <div class="greyBox"></div>
         <nav>
             <div class="logo">RENO</div>
@@ -36,17 +36,44 @@
         </div>
     </section>
     <section>
-        <div class="login-box">
-            <div class="title medium-125 roboto bold">LOGIN</div>
-            <div class="Input">
-                <input type="email" id="emailInput" class="Input-text" placeholder="email address">
-            </div>
-            <div class="Input">
-                <input type="password" id="passwordInput" class="Input-text" placeholder="Password">
-            </div>
-            <button class="main-button" id="loginButton" role="button">login</button>
+        <div class="selector">
+            <button class="button-50" id="loginSelector" role="button">Login</button>
+            <button class="button-50" id="signupSelector" role="button">Sign Up</button>
         </div>
     </section>
+    <div class="divider" style="width: 70%; height: 0; border: 2px solid darkorchid; margin: 3% auto; box-shadow: 0.2rem 0.8rem 1.6rem darkorchid;"></div>
+    <section>
+        <div class="container">
+            <div class="login-box active" id="loginBox">
+                <div class="title medium-125 roboto bold">LOGIN</div>
+                <div class="Input">
+                    <input type="email" id="emailInput" class="Input-text" placeholder="email address">
+                </div>
+                <div class="Input">
+                    <input type="password" id="passwordInput" class="Input-text" placeholder="Password">
+                </div>
+                <button class="main-button" id="loginButton" role="button">login</button>
+            </div>
+            <div class="signup-box" id="signUpBox">
+                <div class="title medium-125 roboto bold margin-center-hor">REGISTER</div>
+                <div class="Input">
+                    <input type="text" id="usernameInput" class="Input-text" placeholder="username">
+                </div>
+                <div class="Input">
+                    <input type="email" id="reg-emailInput" class="Input-text" placeholder="email address">
+                </div>
+                <div class="Input">
+                    <input type="password" id="reg-passwordInput" class="Input-text" placeholder="Password">
+                </div>
+                <div class="Input">
+                    <input type="password" id="reg-passwordInputConfirm" class="Input-text" placeholder="confirm password">
+                </div>
+                <button class="main-button" id="registerButton" role="button">register</button>
+            </div>
+        </div>
+    </section>
+
+
     <script src="login.js"></script>
 </body>
 </html>

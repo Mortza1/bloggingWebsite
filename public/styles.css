@@ -76,11 +76,12 @@ nav {
 }
 
 .slide {
-    position: relative
+    position: relative;
 }
 
 .slide img {
     display: block;
+    width: 100%;
 }
 .slide .content {
     display: flex;
